@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--LightHard: #ebebeb;
+	--Light: #f2f2f2;
+	--WordsHard: #0e1d25;
+	--Words: #0b1c26;
+}
+
+body {
+	background-color: var(--Light);
+	color: var(--Words);
+}

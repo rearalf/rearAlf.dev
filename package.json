@@ -24,9 +24,11 @@
 	"dependencies": {
 		"gatsby": "^2.24.77",
 		"gatsby-plugin-react-helmet": "^3.3.14",
+		"gatsby-plugin-styled-jsx": "^3.3.14",
 		"react": "^16.14.0",
 		"react-dom": "^16.14.0",
-		"react-helmet": "^6.1.0"
+		"react-helmet": "^6.1.0",
+		"styled-jsx": "^3.3.0"
 	},
 	"bugs": {
 		"url": "https://github.com/rearalf/rearalf.dev/issues"

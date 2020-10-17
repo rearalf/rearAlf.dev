@@ -1,0 +1,23 @@
+main.contentMain {
+	padding-top: 4vh;
+	padding-bottom: 4vh;
+}
+
+.listPost {
+	display: grid;
+	gap: 15px;
+	justify-content: space-between;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 595px) {
+	.listPost {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	.listPost {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

@@ -6,7 +6,15 @@ const NameTheme = {
 };
 
 export function useTheme(){
-	const local = localStorage.getItem('Theme');
+	let local;
+	if (typeof window !== 'undefined') {
+		console.log('we are running on the client');
+		local = localStorage.getItem('Theme');
+	}
+	else {
+		console.log('we are running on the server');
+		local = 'dark';
+	}
 	const [ Theme, setTheme ] = useState(local === NameTheme.dark ? true : false);
 	const [ ThemeLogo, setThemeLogo ] = useState('#ebebeb');
 

@@ -1,14 +1,15 @@
 import React from 'react';
-import { PostCard } from '../components/PostCard';
 import { Layout } from '../components/Layout';
 import { graphql } from 'gatsby';
+import { PostCard } from '../components/PostCard';
 import { SEO } from '../components/Seo';
 
-export default function Home({ data }){
+export default function Blogs({ data }){
 	const { edges } = data.allMarkdownRemark;
+
 	return (
 		<Layout>
-			<SEO title="Home" description="Mí sitio Web" />
+			<SEO title="Blogs" description="Tutoriales e infromación que podria interesarte" />
 			<section className="listPost">
 				{edges.map((edge, index) => {
 					const { frontmatter, fields } = edge.node;
@@ -31,7 +32,10 @@ export default function Home({ data }){
 
 export const Query = graphql`
 	{
-		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+		allMarkdownRemark(
+			filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+			sort: { fields: [frontmatter___date], order: DESC }
+		) {
 			edges {
 				node {
 					fields {

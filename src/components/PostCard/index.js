@@ -1,25 +1,30 @@
+import { Link } from 'gatsby';
+import React from 'react';
 import { styled } from './styles';
 
-const Img =
-	'https://i1.wp.com/www.vidagnu.com/wp-content/uploads/2014/12/javascript.png?fit=800%2C300&ssl=1';
-
-export const PostCard = () => {
+export const PostCard = ({ title, description, categories, date, slug, img }) => {
 	return (
 		<article className="postCard">
-			<div
-				className="postCardImage"
-				style={{
-					backgroundImage: `url(${Img})`,
-				}}>
-				<time dateTime="12 April, 2020">12 April, 2020</time>
-			</div>
+			<Link to={slug}>
+				<div
+					className="postCardImage"
+					style={{
+						backgroundImage: `url(${img})`,
+					}}>
+					<time dateTime="12 April, 2020">{date}</time>
+				</div>
+			</Link>
 			<div className="tags">
-				<p className="tag">HTML</p>
-				<p className="tag">CSS</p>
-				<p className="tag">JS</p>
+				{categories.map((category, index) => (
+					<p key={index} className="tag">
+						{category}
+					</p>
+				))}
 			</div>
-			<h1>Un buen titulo para empezar</h1>
-			<p className="textPostCard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis commodi a dolor! Optio rem debitis nisi laboriosam? Vero nostrum, soluta dolorem vel maxime nemo!</p>
+			<Link to={slug}>
+				<h1>{title}</h1>
+			</Link>
+			<p className="textPostCard">{description}</p>
 			<style jsx>{styled}</style>
 		</article>
 	);

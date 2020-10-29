@@ -1,3 +1,4 @@
+import React from 'react';
 import { GitHub } from '../Icons/GitHub';
 import { styled } from './styles';
 
@@ -11,7 +12,7 @@ export const Footer = () => {
 					href="https://github.com/rearalf/rearalf.dev"
 					target="_blank"
 					rel="noopener noreferrer">
-					<GitHub width={25} Fill={'#5EBFBF'} />
+					<GitHub Width={25} Fill={'#5EBFBF'} />
 					Enlace del proyecto
 				</a>
 			</div>

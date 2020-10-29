@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'gatsby';
 import { useTheme } from '../../hooks/useTheme';
 import { GitHub } from '../Icons/GitHub';
@@ -9,7 +10,7 @@ export const NavBar = () => {
 	const { ThemeLogo, handleChange, Theme } = useTheme();
 
 	const classThem = Theme ? 'themeDark' : 'themeLight';
-	const FillGitHub = Theme ? '#333' : '#f5f5f5';
+	const FillGitHub = !Theme ? '#333' : '#f5f5f5';
 	const ThemeTitle = Theme ? 'Theme Dark' : 'Theme Light';
 
 	return (
@@ -24,7 +25,7 @@ export const NavBar = () => {
 							href="https://github.com/rearalf"
 							target="_blank"
 							rel="noopener noreferrer">
-							<GitHub width={25} Fill={FillGitHub} />
+							<GitHub Width={25} Fill={FillGitHub} />
 						</a>
 						<a
 							href="https://github.com/rearalf"
@@ -42,8 +43,8 @@ export const NavBar = () => {
 				<nav>
 					<div className="navLinkLeft">
 						<Link to="/">Home</Link>
-						<Link to="/articles">Articulos</Link>
-						<Link to="/proyects">Proyectos</Link>
+						<Link to="/blogs">Blogs</Link>
+						<Link to="/portfolio">Portafolio</Link>
 					</div>
 					<div className="navLinkRight">
 						<Link to="/about">Acerca</Link>

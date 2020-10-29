@@ -37,12 +37,56 @@ body {
 	background-color: var(--LightHard);
 	color: var(--Words);
 	font-family: var(--font-sans-serif);
+	transition: background-color 1s ease-in-out, color .5s ease;
 }
 
 .container {
 	max-width: 1120px;
 	margin: 0 auto;
 	padding: 0 4vw;
+}
+
+.listPost {
+	display: grid;
+	gap: 18px;
+	justify-content: space-between;
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 595px) {
+	.listPost {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	.listPost {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.Template p,
+.Template h1,
+.Template h2,
+.Template h3,
+.Template ul {
+	margin: 1rem 0;
+}
+
+.Template h1 {
+	margin: 2.5rem 0 2rem;
+	text-align: center;
+}
+
+.Template h1,
+.Template h2,
+.Template h3 {
+	font-family: var(--font-serif);
+}
+
+.Template a {
+	color: var(--WordsHard);
+	text-decoration: underline;
 }
 
 /* Asumimos que el estado inicial es mobile */

@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 
+const NameTheme = {
+	dark: 'dark',
+	light: 'light',
+};
+
 export function useTheme(){
-	const [ Theme, setTheme ] = useState(localStorage.getItem('Theme') === 'dark' ? true : false);
+	const local = localStorage.getItem('Theme');
+	const [ Theme, setTheme ] = useState(local === NameTheme.dark ? true : false);
 	const [ ThemeLogo, setThemeLogo ] = useState('#ebebeb');
 
 	const handleChange = () => setTheme(!Theme);
@@ -10,15 +16,15 @@ export function useTheme(){
 		() => {
 			if (Theme) {
 				setThemeLogo('#ebebeb');
-				localStorage.setItem('Theme', 'dark');
-				document.body.classList.remove('light');
-				document.body.classList.add('dark');
+				localStorage.setItem('Theme', NameTheme.dark);
+				document.body.classList.remove(NameTheme.light);
+				document.body.classList.add(NameTheme.dark);
 			}
 			else {
 				setThemeLogo('#0B1C26');
-				localStorage.setItem('Theme', 'light');
-				document.body.classList.remove('dark');
-				document.body.classList.add('light');
+				localStorage.setItem('Theme', NameTheme.light);
+				document.body.classList.remove(NameTheme.dark);
+				document.body.classList.add(NameTheme.light);
 			}
 		},
 		[ Theme ],

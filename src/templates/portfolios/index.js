@@ -25,14 +25,16 @@ const Portafolio = ({ data }) => {
 					<LinkIcon Fill="#5EBFBF" Width="15" Height="15" />
 					Ver Sitio
 				</a>
-				<a
-					className="Date"
-					href={post.frontmatter.viewSolution}
-					target="_blank"
-					rel="noopener noreferrer">
-					<LinkIcon Fill="#5EBFBF" Width="15" Height="15" />
-					Ver Frontend Mentor
-				</a>
+				{post.frontmatter.viewSolution && (
+					<a
+						className="Date"
+						href={post.frontmatter.viewSolution}
+						target="_blank"
+						rel="noopener noreferrer">
+						<LinkIcon Fill="#5EBFBF" Width="15" Height="15" />
+						Ver Frontend Mentor
+					</a>
+				)}
 				<a
 					className="Date"
 					href={post.frontmatter.github}

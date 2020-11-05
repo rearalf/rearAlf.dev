@@ -1,17 +1,17 @@
 ---
-title: Base Apparel coming soon page
-description: Primer desafío de Frontend Mentor. Hecho con HTML, CSS y JavaScript básico.
+title: Fylo data storage component
+description: Tercer desafío de Frontend Mentor. Hecho con HTML, CSS y JavaScript básico.
 categories: [ HTML, CSS, JavaScript ]
 image: ./preview.webp
-date: "2020-06-04T22:12:03.284Z"
-github: https://github.com/rearalf/base-apparel-coming-soon-master
-viewSolution: https://www.frontendmentor.io/solutions/css-grid-layout-W58lB_8T2
-liveSite: https://base-apparel-coming-soon-master.rearalf.now.sh/
+date: "2020-06-12T22:12:03.284Z"
+github: https://github.com/rearalf/fylo-data-storage-component-master
+viewSolution: https://www.frontendmentor.io/solutions/fylo-data-storage-component-master-2KWWa3igi
+liveSite: https://fylo-data-storage-component-master.rearalf.vercel.app/
 ---
 
-# Base Apparel coming soon page
+# Frontend Mentor - Fylo data storage component
 
-![Design preview for the Base Apparel coming soon page coding challenge](./preview.webp)
+![Design preview for the Fylo data storage component coding challenge](./preview.webp)
 
 ## Welcome! 👋
 
@@ -19,21 +19,17 @@ Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+**To do this challenge, you need a basic understanding of HTML and CSS.**
 
 ## The challenge
 
-Your challenge is to build out this coming soon page and get it looking as close to the design as possible.
+Your challenge is to build out this data storage component and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Your users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Receive an error message when the `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
@@ -43,7 +39,7 @@ Your task is to build out the project to the designs inside the `/design` folder
 
 The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
 
-If you would like the Sketch file in order to inspect the design in more detail it is available to [purchase here](https://bmc.xyz/l/Pn38ZJp61).
+If you would like the Sketch file in order to inspect the design in more detail it is available to buy from the challenge page on the platform.
 
 You will find all the required assets in the `/images` folder. The assets are already optimized.
 
@@ -91,4 +87,4 @@ A massive thank you to our community sponsors!
 
 - [Vercel](https://bit.ly/fem-vercel) offers an amazing website hosting service, which is super simple to set up. Just connect your GitHub account, point to a repo and your site will be deployed. Perfect for your website and frontend hosting needs - especially since it's free to get started!
 - [Sizzy](https://bit.ly/fm-sizzy) is an extremely useful browser designed specifically to improve a developer's workflow when building websites. You can fire up multiple device emulators and run them all in sync while building out your web pages. Perfect for helping build fully responsive websites!
-- [Dracula PRO](https://bit.ly/fem-dracula) is a beautiful dark theme to help keep you focused and productive while you code. The theme isn't just for your editor either. You can also apply it to your most-used apps like your terminal and even Slack!
+- [Qualified](https://bit.ly/fem-qualified) helps companies assess engineers with realistic code tests and pair-programming interviews. Their assessments test on-the-job skills as opposed to algorithmic puzzles which leads to a much better recruitment process for everyone involved.

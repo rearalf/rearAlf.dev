@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Layout } from '../../components/Layout';
 import { SEO } from '../../components/Seo';
 import { Calendar } from '../../components/Icons/Calendar';
@@ -17,8 +17,22 @@ const Post = ({ data, pageContext }) => {
 				<Calendar Fill="#5EBFBF" /> {post.frontmatter.date}
 			</span>
 			<section className="Template" dangerouslySetInnerHTML={{ __html: post.html }} />
-			<p>{previous}</p>
-			<p>{next}</p>
+			<div className="prevAndnext">
+				<div>
+					{previous && (
+						<Link to={previous.fields.slug} rel="prev">
+							← {previous.frontmatter.title}
+						</Link>
+					)}
+				</div>
+				<div>
+					{next && (
+						<Link to={next.fields.slug} rel="next">
+							{next.frontmatter.title} →
+						</Link>
+					)}
+				</div>
+			</div>
 			<style jsx>{styled}</style>
 		</Layout>
 	);

@@ -16,4 +16,10 @@ export const styled = css`
 	.Date > :global(svg) {
 		margin-right: .5rem;
 	}
+
+	.prevAndnext {
+		display: flex;
+		justify-content: space-between;
+		margin: 2rem 0;
+	}
 `;

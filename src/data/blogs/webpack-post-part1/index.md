@@ -1,12 +1,12 @@
 ---
-title: Empezando con webpack
+title: "Empezando con webpack. Parte #1"
 description: Configuración baíca para empezar un poryecto de react, para css, imagenes y contenido en general.
 categories: [ webpack, react ]
 image: ./webpackpost.webp
 date: "2020-10-10T22:06:00.284Z"
 ---
 
-#   Empezando con <img width="50" align=center src=https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg /> webpack
+#   Empezando con <img width="50" align=center src=https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg /> webpack. Parte #1
 
 Esta es la primera parte de mis apuntes aprendiendo  **Webpack**. Guiando me por la documentación oficial y tutórales que encuentro en youtube. En esta parte solo se vera los conceptos básicos de webpack.
 
@@ -26,7 +26,7 @@ Es un empaquetador de módulos o conjunto de reglas para aplicaciones modernas e
 
 Como requisitos básicos se necesita [node.js](https://nodejs.org/es/) el cual, si están en Windows, también instalara npm para administrar los paquetes. Para verificar si ya lo tienes y ver que versión tienes de node y npm debes poner en tu terminal los siguiente.
 
-```
+```bash
 node -v
 npm -v
 ```
@@ -43,7 +43,7 @@ Para entender mejor el proceso de configuración hay que entender bien sus conce
 
   ```javascript
   module.exports = {
-    entry: './src/index.js'
+      entry: './src/index.js'
   };
   ```
 
@@ -52,10 +52,10 @@ Para entender mejor el proceso de configuración hay que entender bien sus conce
   ```javascript
   const path = require('path');
   module.exports = {
-    output: {
-      filename: 'bundle.js',
-  	path: path.resolve(__dirname, 'dist'),
-    }
+      output: {
+          filename: 'bundle.js',
+          path: path.resolve(__dirname, 'dist'),
+      }
   };
   ```
 

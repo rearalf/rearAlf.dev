@@ -17,32 +17,26 @@ const Portafolio = ({ data }) => {
 					<Calendar Fill="#5EBFBF" Title={post.frontmatter.date} />
 					{post.frontmatter.date}
 				</span>
-				<a
-					className="Date"
-					href={post.frontmatter.liveSite}
-					target="_blank"
-					rel="noopener noreferrer">
-					<LinkIcon Fill="#5EBFBF" Width="15" Height="15" />
-					Ver Sitio
-				</a>
-				{post.frontmatter.viewSolution && (
+				{post.frontmatter.liveSite && (
 					<a
 						className="Date"
-						href={post.frontmatter.viewSolution}
+						href={post.frontmatter.liveSite}
 						target="_blank"
 						rel="noopener noreferrer">
 						<LinkIcon Fill="#5EBFBF" Width="15" Height="15" />
-						Ver Frontend Mentor
+						Ver Sitio
 					</a>
 				)}
-				<a
-					className="Date"
-					href={post.frontmatter.github}
-					target="_blank"
-					rel="noopener noreferrer">
-					<GitHub Fill="#5EBFBF" Width="21" Height="21" Title="Ver código" />
-					Ver código
-				</a>
+				{post.frontmatter.github && (
+					<a
+						className="Date"
+						href={post.frontmatter.github}
+						target="_blank"
+						rel="noopener noreferrer">
+						<GitHub Fill="#5EBFBF" Width="21" Height="21" Title="Ver código" />
+						Ver código
+					</a>
+				)}
 			</div>
 			<section className="Template" dangerouslySetInnerHTML={{ __html: post.html }} />
 			<style jsx>{styled}</style>
@@ -62,7 +56,6 @@ export const data = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				description
 				github
-				viewSolution
 				liveSite
 			}
 		}

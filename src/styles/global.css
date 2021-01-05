@@ -89,6 +89,30 @@ body {
 	text-decoration: underline;
 }
 
+.Template table {
+	display: block;
+	width: 100%;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	max-width: 100%;
+	overflow: auto;
+
+	border-spacing: 0;
+	border-collapse: collapse;
+
+	margin: 0 auto;
+	border: 1px solid #5ebfbf;
+}
+
+.Template th,
+.Template td {
+	width: 25%;
+	border: 1px solid #5ebfbf;
+	border-collapse: collapse;
+	padding: .5rem;
+}
+
 /* Asumimos que el estado inicial es mobile */
 /* Tablet */
 @media screen and (min-width: 595px) {

@@ -108,6 +108,8 @@ Para entender mejor el proceso de configuración hay que entender bien sus conce
 
 * **Mode:** Un parámetro para indicar en que modo se esta ejecutando webpack `development`, `production` o `none`, para cada entorno incorpora optimizaciones diferentes. El valor por defecto es `production`.
 
+* **Optimization**: Una parte importante de la configuración de Webpack, útil cuando se ve aspectos como el tiempo de carga que es uno de los mas importantes. Aquí se agregan todos esos plugins que te ayudaran a realizar esas mejoras en el rendimiento de tu proyecto con Webpack 
+
 ## Bibliografía 
 
 Todo el contenido esta mas explicado en:

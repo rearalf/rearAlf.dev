@@ -2,13 +2,13 @@ import React from 'react';
 import { PostCard } from '../components/PostCard';
 import { Layout } from '../components/Layout';
 import { graphql } from 'gatsby';
-import { SEO } from '../components/Seo';
+import { Seo } from '../components/Seo';
 
 export default function Home({ data }){
 	const { edges } = data.allMarkdownRemark;
 	return (
 		<Layout>
-			<SEO title="Home" description="Mí sitio Web" />
+			<Seo title="Home" description="Mí sitio Web" />
 			<section className="listPost">
 				{edges.map((edge, index) => {
 					const { frontmatter, fields } = edge.node;
@@ -19,8 +19,8 @@ export default function Home({ data }){
 							categories={frontmatter.categories}
 							description={frontmatter.description}
 							date={frontmatter.date}
-							slug={fields.slug}
 							img={frontmatter.image.childImageSharp.fluid.src}
+							slug={fields.slug}
 						/>
 					);
 				})}

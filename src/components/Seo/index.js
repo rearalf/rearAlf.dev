@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import favicon from '../../../static/favicon.ico';
 
-export function SEO({ title = '', description = '' } = {}){
+export function Seo({ title = '', description = '' } = {}){
 	return (
 		<Helmet>
 			<title>{title} || rearAlf</title>

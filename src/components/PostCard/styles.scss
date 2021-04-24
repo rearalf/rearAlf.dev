@@ -1,18 +1,13 @@
-import css from 'styled-jsx/css';
-import { colors } from '../../styles/theme';
-
-export const styled = css`
-	.postCard {
-		border-radius: 5px;
-		background-color: var(--${colors.Light});
-		box-shadow: 4px 4px 4px 0 var(--${colors.BoxShadow});
-	}
+.postCard {
+	border-radius: 5px;
+	background-color: var(--backgroundSecondary);
+	box-shadow: 4px 4px 4px 0 var(--boxShadow);
 
 	.postCardImage {
 		margin-bottom: 2vh;
 		width: auto;
 		height: 200px;
-		background: var(--${colors.Light}) no-repeat 50%;
+		background: var(--backgroundSecondary) no-repeat 50%;
 		background-size: cover;
 		border-radius: 5px 5px 0 0;
 		position: relative;
@@ -39,8 +34,8 @@ export const styled = css`
 		font-size: 14px;
 		padding: 10px;
 		border-radius: 15px;
-		background-color: var(--${colors.LightHard});
-		box-shadow: 4px 4px 4px 0 var(--${colors.BoxShadow});
+		background-color: var(--backgroundPrimary);
+		box-shadow: 4px 4px 4px 0 var(--boxShadow);
 		margin-right: 1vw;
 	}
 
@@ -55,4 +50,4 @@ export const styled = css`
 		padding: 0 2vw;
 		margin-bottom: 2vh;
 	}
-`;
+}

@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import { styled } from './styles';
+import { Link } from 'gatsby';
+import './styles.scss';
 
-export const PostCard = ({ title, description, categories, date, slug, img }) => {
+export const PostCard = ({ title, description, categories, date, slug = '/', img }) => {
 	return (
 		<article className="postCard">
 			<Link to={slug}>
@@ -25,7 +25,6 @@ export const PostCard = ({ title, description, categories, date, slug, img }) =>
 				<h1>{title}</h1>
 			</Link>
 			<p className="textPostCard">{description}</p>
-			<style jsx>{styled}</style>
 		</article>
 	);
 };

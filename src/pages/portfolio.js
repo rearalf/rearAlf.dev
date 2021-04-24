@@ -1,14 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/Layout';
-import { SEO } from '../components/Seo';
+import { Seo } from '../components/Seo';
 import { PostCard } from '../components/PostCard';
 
 export default function Portfolio({ data }){
 	const { edges } = data.allMarkdownRemark;
 	return (
 		<Layout>
-			<SEO title="Mí portafolio" description="Toda mi experiencia y preactica." />
+			<Seo title="Mí portafolio" description="Toda mi experiencia y preactica." />
 			<section className="listPost">
 				{edges.map((edge, index) => {
 					const { frontmatter, fields } = edge.node;
@@ -19,8 +19,8 @@ export default function Portfolio({ data }){
 							categories={frontmatter.categories}
 							description={frontmatter.description}
 							date={frontmatter.date}
-							slug={fields.slug}
 							img={frontmatter.image.childImageSharp.fluid.src}
+							slug={fields.slug}
 						/>
 					);
 				})}

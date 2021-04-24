@@ -1,7 +1,19 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
+	const { createNodeField } = actions;
+	if (node.internal.type === `MarkdownRemark`) {
+		const value = createFilePath({ node, getNode });
+		createNodeField({
+			node,
+			name: `slug`,
+			value,
+		});
+	}
+};
+
+/* exports.onCreateWebpackConfig = ({ stage, actions }) => {
 	if (stage.startsWith('develop')) {
 		actions.setWebpackConfig({
 			resolve: {
@@ -11,7 +23,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 			},
 		});
 	}
-};
+}; */
 
 exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;
@@ -99,16 +111,4 @@ exports.createPages = async ({ graphql, actions }) => {
 			},
 		});
 	});
-};
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-	const { createNodeField } = actions;
-	if (node.internal.type === `MarkdownRemark`) {
-		const value = createFilePath({ node, getNode });
-		createNodeField({
-			node,
-			name: `slug`,
-			value,
-		});
-	}
 };

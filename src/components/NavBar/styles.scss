@@ -1,13 +1,8 @@
-import css from 'styled-jsx/css';
-import { colors } from '../../styles/theme';
-
-export const styled = css`
-	header {
-		background-color: var(--${colors.Light});
-		padding-top: 20px;
-		padding-bottom: 20px;
-		box-shadow: 0 4px 4px 0 var(--${colors.BoxShadow});
-	}
+header {
+	background-color: var(--backgroundSecondary);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 0 4px 4px 0 var(--boxShadow);
 
 	.navHead {
 		display: flex;
@@ -24,7 +19,7 @@ export const styled = css`
 		align-items: center;
 	}
 
-	.headRight > :global(a) {
+	.headRight > a {
 		margin: 0 .5rem;
 	}
 
@@ -41,15 +36,15 @@ export const styled = css`
 		vertical-align: baseline;
 	}
 
-	.navLinkRight > :global(a),
-	.navLinkLeft > :global(a) {
+	.navLinkRight > a,
+	.navLinkLeft > a {
 		display: inline-block;
 		padding: 5px 10px;
 		opacity: 1;
 	}
 
 	.navLinkRight > :global(a) {
-		border: 1px solid var(--${colors.Words});
+		border: 1px solid var(--colorTextSecondary);
 		border-radius: 0.6rem;
 		opacity: .7;
 		line-height: 1em;
@@ -144,7 +139,7 @@ export const styled = css`
 		opacity: 0;
 	}
 	.themeDark .cosasRara {
-		background: var(--${colors.Light});
+		background: var(--backgroundSecondary);
 		border-radius: 50%;
 		border: 0px;
 		height: 24px;
@@ -156,4 +151,4 @@ export const styled = css`
 		transition: background 0.5s ease 0s, transform 0.45s ease 0s;
 		width: 24px;
 	}
-`;
+}

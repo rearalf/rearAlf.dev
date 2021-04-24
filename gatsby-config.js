@@ -3,19 +3,24 @@ const path = require('path');
 module.exports = {
 	siteMetadata: {
 		title: 'rearAlf',
-		description: 'El website de Ricardo Alf',
+		description: 'El website personal de Ricardo Alf',
 		author: 'Ricardo Alfaro',
+		firstName: `Ricardo`,
+		lastName: `Alfaro`,
+		occupation: `Frontend Developer`,
+		keywords: [ 'Ricardo', 'Ricardo Alf', 'Alf', 'Blog' ],
+		siteUrl: 'https://rearalf.vercel.app/',
 	},
 	plugins: [
+		`gatsby-plugin-sass`,
 		'gatsby-plugin-react-helmet',
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
-			resolve: `gatsby-plugin-styled-jsx`,
+			resolve: 'gatsby-source-filesystem',
 			options: {
-				optimizeForSpeed: true,
-				sourceMaps: false,
-				vendorPrefixes: true,
+				name: 'portfolio',
+				path: path.join(__dirname, 'src', 'data', 'portfolios'),
 			},
 		},
 		{
@@ -26,25 +31,18 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: 'portfolio',
-				path: path.join(__dirname, 'src', 'data', 'portfolios'),
-			},
-		},
-		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
 				excerpt_separator: '<!-- endexcerpt -->',
 				plugins: [
 					{
-						resolve: 'gatsby-remark-prismjs',
-					},
-					{
 						resolve: `gatsby-remark-images`,
 						options: {
 							maxWidth: 800,
 						},
+					},
+					{
+						resolve: 'gatsby-remark-prismjs',
 					},
 				],
 			},

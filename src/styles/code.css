@@ -166,8 +166,18 @@ pre[class*="language-"] {
 	top: 0px;
 }
 
+.gatsby-highlight pre[class="language-json"]::before {
+	content: "Json";
+	background: hsl(39, 93%, 54%);
+}
+
 .gatsby-highlight pre[class="language-javascript"]::before {
-	content: "js";
+	content: "Js";
+	background: rgb(247, 223, 30);
+}
+
+.gatsby-highlight pre[class="language-js"]::before {
+	content: "Js";
 	background: rgb(247, 223, 30);
 }
 
@@ -185,6 +195,12 @@ pre[class*="language-"] {
 
 .gatsby-highlight pre[class="language-bash"]::before {
 	content: "Bash";
+	color: #ffffb6;
+	background: hsl(130, 94%, 43%);
+}
+
+.gatsby-highlight pre[class="language-shell"]::before {
+	content: "Shell";
 	color: #ffffb6;
 	background: hsl(130, 94%, 43%);
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Layout } from '../../components/Layout';
-import { SEO } from '../../components/Seo';
+import { Seo } from '../../components/Seo';
 import { Calendar } from '../../components/Icons/Calendar';
+import '../../styles/template.scss';
 import '../../styles/code.css';
-import { styled } from './styles';
 
 const Post = ({ data, pageContext }) => {
 	const { previous, next } = pageContext;
@@ -12,28 +12,29 @@ const Post = ({ data, pageContext }) => {
 
 	return (
 		<Layout>
-			<SEO title={post.frontmatter.title} description={post.excerpt} />
-			<span className="Date">
-				<Calendar Fill="#5EBFBF" /> {post.frontmatter.date}
-			</span>
-			<section className="Template" dangerouslySetInnerHTML={{ __html: post.html }} />
-			<div className="prevAndnext">
-				<div>
-					{previous && (
-						<Link to={previous.fields.slug} rel="prev">
-							← {previous.frontmatter.title}
-						</Link>
-					)}
-				</div>
-				<div>
-					{next && (
-						<Link to={next.fields.slug} rel="next">
-							{next.frontmatter.title} →
-						</Link>
-					)}
+			<Seo title={post.frontmatter.title} description={post.excerpt} />
+			<div className="contentTemplate">
+				<span className="Date">
+					<Calendar Fill="#5EBFBF" /> {post.frontmatter.date}
+				</span>
+				<section className="Template" dangerouslySetInnerHTML={{ __html: post.html }} />
+				<div className="prevAndnext">
+					<div>
+						{previous && (
+							<Link to={previous.fields.slug} rel="prev">
+								← {previous.frontmatter.title}
+							</Link>
+						)}
+					</div>
+					<div>
+						{next && (
+							<Link to={next.fields.slug} rel="next">
+								{next.frontmatter.title} →
+							</Link>
+						)}
+					</div>
 				</div>
 			</div>
-			<style jsx>{styled}</style>
 		</Layout>
 	);
 };

@@ -4,7 +4,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { GitHub } from '../Icons/GitHub';
 import Logo from '../Icons/Logo';
 import { Twitter } from '../Icons/Twitter';
-import { styled } from './styles';
+import './styles.scss';
 
 export const NavBar = () => {
 	const { ThemeLogo, handleChange, Theme } = useTheme();
@@ -51,7 +51,6 @@ export const NavBar = () => {
 					</div>
 				</nav>
 			</div>
-			<style jsx>{styled}</style>
 		</header>
 	);
 };

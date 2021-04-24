@@ -2,14 +2,13 @@ import React from 'react';
 import { Layout } from '../components/Layout';
 import { graphql } from 'gatsby';
 import { PostCard } from '../components/PostCard';
-import { SEO } from '../components/Seo';
+import { Seo } from '../components/Seo';
 
 export default function Blogs({ data }){
 	const { edges } = data.allMarkdownRemark;
-
 	return (
 		<Layout>
-			<SEO title="Blogs" description="Tutoriales e infromación que podria interesarte" />
+			<Seo title="Blogs" description="Tutoriales e infromación que podria interesarte" />
 			<section className="listPost">
 				{edges.map((edge, index) => {
 					const { frontmatter, fields } = edge.node;
@@ -20,8 +19,8 @@ export default function Blogs({ data }){
 							categories={frontmatter.categories}
 							description={frontmatter.description}
 							date={frontmatter.date}
-							slug={fields.slug}
 							img={frontmatter.image.childImageSharp.fluid.src}
+							slug={fields.slug}
 						/>
 					);
 				})}

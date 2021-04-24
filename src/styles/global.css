@@ -18,24 +18,24 @@ a {
 }
 
 body.light {
-	--LightHard: hsl(0, 0%, 95%);
-	--Light: hsl(0, 0%, 92%);
-	--WordsHard: hsl(202, 55%, 10%);
-	--Words: hsl(201, 45%, 10%);
+	--backgroundPrimary: hsl(0, 0%, 95%);
+	--backgroundSecondary: hsl(0, 0%, 92%);
+	--colorTextPrimary: hsl(202, 55%, 10%);
+	--colorTextSecondary: hsl(201, 45%, 10%);
 	--boxShadow: hsl(0, 0%, 80%, .5);
 }
 
 body.dark {
-	--LightHard: hsl(202, 55%, 10%);
-	--Light: hsl(201, 55%, 15%);
-	--WordsHard: hsl(0, 0%, 95%);
-	--Words: hsl(0, 0%, 92%);
+	--backgroundPrimary: hsl(202, 55%, 10%);
+	--backgroundSecondary: hsl(201, 55%, 15%);
+	--colorTextPrimary: hsl(0, 0%, 95%);
+	--colorTextSecondary: hsl(0, 0%, 92%);
 	--boxShadow: hsl(201, 55%, 15%, .5);
 }
 
 body {
-	background-color: var(--LightHard);
-	color: var(--Words);
+	background-color: var(--backgroundPrimary);
+	color: var(--colorTextSecondary);
 	font-family: var(--font-sans-serif);
 	transition: background-color 1s ease-in-out, color .5s ease;
 }
@@ -63,54 +63,6 @@ body {
 	.listPost {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-}
-
-.Template p,
-.Template h1,
-.Template h2,
-.Template h3,
-.Template ul {
-	margin: 1rem 0;
-}
-
-.Template h1 {
-	margin: 2.5rem 0 2rem;
-	text-align: center;
-}
-
-.Template h1,
-.Template h2,
-.Template h3 {
-	font-family: var(--font-serif);
-}
-
-.Template a {
-	color: var(--WordsHard);
-	text-decoration: underline;
-}
-
-.Template table {
-	display: block;
-	width: 100%;
-	width: -webkit-max-content;
-	width: -moz-max-content;
-	width: max-content;
-	max-width: 100%;
-	overflow: auto;
-
-	border-spacing: 0;
-	border-collapse: collapse;
-
-	margin: 0 auto;
-	border: 1px solid #5ebfbf;
-}
-
-.Template th,
-.Template td {
-	width: 25%;
-	border: 1px solid #5ebfbf;
-	border-collapse: collapse;
-	padding: .5rem;
 }
 
 /* Asumimos que el estado inicial es mobile */

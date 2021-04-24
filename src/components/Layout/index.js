@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Footer } from '../Footer';
 import { NavBar } from '../NavBar';
-import { styled } from './styles';
+import './styles.scss';
 
 export const Layout = ({ children }) => {
 	return (
@@ -9,7 +9,6 @@ export const Layout = ({ children }) => {
 			<NavBar />
 			<main className="contentMain container">{children}</main>
 			<Footer />
-			<style jsx>{styled}</style>
 		</Fragment>
 	);
 };

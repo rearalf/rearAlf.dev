@@ -1,6 +1,6 @@
 import React from 'react';
+import './styles.scss';
 import { GitHub } from '../Icons/GitHub';
-import { styled } from './styles';
 
 export const Footer = () => {
 	return (
@@ -16,7 +16,6 @@ export const Footer = () => {
 					Enlace del proyecto
 				</a>
 			</div>
-			<style jsx>{styled}</style>
 		</footer>
 	);
 };

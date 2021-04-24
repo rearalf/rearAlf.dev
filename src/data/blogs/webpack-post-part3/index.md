@@ -69,7 +69,7 @@ Para empezar a utilizarlo junto con Webpack, se debe de instalar una serie de co
 
 ### Configuración 
 
-Luego de haber instalado todo, procedemos a crear en la raíz del proyecto un nuevo archivo llamado `.babelrc`, por si no lo sabias el significado del [punto al inicio](###Punto al inicio). Dicho archivo tiene formato JSON.
+Luego de haber instalado todo, procedemos a crear en la raíz del proyecto un nuevo archivo llamado `.babelrc`, por si no lo sabias el significado del punto al inicio. Dicho archivo tiene formato JSON.
 
 La primera configuración que agregaremos será los `presets`, que contiene un arreglo de plugin que nos ayuda a transformar nuestro código JavaScript a una versión más compatible con la mayoría de navegadores. Luego esta la sección de `plugins` que agrega mejoras en el rendimiento, o  comprimiendo ciertas partes del código para mayor eficiencia del proyecto.
 

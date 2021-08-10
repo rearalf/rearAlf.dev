@@ -24,7 +24,7 @@ $ npm init -y
 
 ## 📦 Instalando paquetes
 
-Ahora instalaremos los paquetes que necesitamos. La mayoría de paquetes que Webpack necesita se instalan como dependencias de desarrollo como una buena practica.
+Ahora instalaremos los paquetes que necesitamos. La mayoría de paquetes que Webpack necesita se instalan como dependencias de desarrollo, como una buena practica.
 
 ```bash
 npm install webpack webpack-cli -D
@@ -36,11 +36,12 @@ npm install webpack webpack-cli -D
 
 Ahora crearemos los archivos que vamos a utilizar:
 
-```
-src
-| index.js
-index.html
-webpack.config.js
+```treeview
+root/
+├── src/
+│   └── index.js
+├── index.html
+├── webpack.config.js
 ```
 
 En la carpeta `index.html` agregamos una estructura simple de HTML y agregamos un script
@@ -49,7 +50,7 @@ En la carpeta `index.html` agregamos una estructura simple de HTML y agregamos u
 <script src="./dist/main.js"></script>
 ```
 
-En el `index.js` escribes un simple, para ir empezando:
+En el `index.js` escribes una simple función y unos `console.log()`, para ir empezando.
 
 ```js
 console.log('Hello World');

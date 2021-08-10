@@ -149,6 +149,16 @@ pre[class*="language-"] {
 	padding: 1rem 0 1rem .4rem;
 }
 
+.gatsby-highlight-code-line {
+	background-color: hsl(203deg 57% 30% / 10%);
+	display: block;
+	margin-right: -1em;
+	margin-left: -1em;
+	padding-right: 1em;
+	padding-left: 0.75em;
+	border-left: 0.25em solid hsl(203deg 57% 50% / 50%);
+}
+
 .gatsby-highlight pre[class*="language-"]::before {
 	background: var(--theme-ui-colors-grey-30, #d9d7e0);
 	border-radius: 0px 0px 4px 4px;
@@ -174,33 +184,52 @@ pre[class*="language-"] {
 .gatsby-highlight pre[class="language-javascript"]::before {
 	content: "Js";
 	background: rgb(247, 223, 30);
+	box-shadow: 0 4px 8px 0 rgb(247, 223, 30, .25);
 }
 
 .gatsby-highlight pre[class="language-js"]::before {
 	content: "Js";
 	background: rgb(247, 223, 30);
+	box-shadow: 0 4px 8px 0 rgb(247, 223, 30, .25);
 }
 
 .gatsby-highlight pre[class="language-css"]::before {
 	content: "CSS";
 	color: #ffffb6;
 	background: hsl(228, 78%, 52%);
+	box-shadow: 0 4px 8px 0 hsla(228, 78%, 52%, 0.25);
 }
 
 .gatsby-highlight pre[class="language-html"]::before {
 	content: "HTML";
 	color: #ffffb6;
 	background: hsl(13, 79%, 51%);
+	box-shadow: 0 4px 8px 0 hsla(13, 78%, 51%, 0.25);
 }
 
 .gatsby-highlight pre[class="language-bash"]::before {
 	content: "Bash";
 	color: #ffffb6;
 	background: hsl(130, 94%, 43%);
+	box-shadow: 0 4px 8px 0 hsla(130, 94%, 43%, 0.25);
 }
 
 .gatsby-highlight pre[class="language-shell"]::before {
 	content: "Shell";
 	color: #ffffb6;
 	background: hsl(130, 94%, 43%);
+	box-shadow: 0 4px 8px 0 hsla(130, 94%, 43%, 0.25);
+}
+.gatsby-highlight pre[class="language-treeview"]::before {
+	content: "Treeview";
+	color: #ffffb6;
+	background: hsl(0, 0%, 40%);
+	box-shadow: 0 4px 8px 0 hsla(0, 0%, 40%, 0.25);
+}
+
+code.language-treeview .token.entry-dir {
+	color: #96cbfe;
+}
+code.language-treeview .token.entry-symlink .file:first-child {
+	color: #87c38a;
 }

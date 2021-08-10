@@ -1,6 +1,6 @@
 ---
 title: "Empezando con webpack. Parte #3"
-description: Configuración baíca para empezar un poryecto de react, para css, imagenes y contenido en general.
+description: Configuración baíca para babel y poder convertir el código ECMAScript 2015+ en una versión de JavaScript compatible con versiones anteriores en navegadores.
 categories: [ webpack, react ]
 image: ./webpackpost.webp
 date: "2021-02-25T22:06:00.284Z"
@@ -12,25 +12,19 @@ Como ya vimos en las partes anteriores, ya tenemos un archivo de configuración 
 
 ## Antes de empezar
 
-Utilizaremos la misma estructura de la parte anterior con los mismos archivos y su contenido. Todo esto para poder continuar con la configuración agregándole nuevas características.
+Utilizaremos la misma estructura de la parte anterior con los mismos archivos y su contenido. Todo esto para poder continuar con la configuración agregándole nuevas características. Los archivos que se agregarán, para avanzar, ya están marcados.
 
-```
-src
-| index.js
-.gitignore
-index.html
-package-lock.json
-package.json
-README.md
-webpack.config.js
-```
-
-También necesitaremos el script que creamos:
-
-```json
-"scripts": {
-	"start": "webpack"
-},
+```treeview{4}
+root/
+├── src/
+|   └── index.js
+├── .babelrc
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── webpack.config.js
 ```
 
 ## Babel Loader
@@ -69,7 +63,7 @@ Para empezar a utilizarlo junto con Webpack, se debe de instalar una serie de co
 
 ### Configuración 
 
-Luego de haber instalado todo, procedemos a crear en la raíz del proyecto un nuevo archivo llamado `.babelrc`, por si no lo sabias el significado del punto al inicio. Dicho archivo tiene formato JSON.
+Luego de haber instalado todo, procedemos a crear en la raíz del proyecto un nuevo archivo llamado `.babelrc`, por si no lo sabias el significado del [punto al inicio](#punto-al-inicio). Dicho archivo tiene formato JSON.
 
 La primera configuración que agregaremos será los `presets`, que contiene un arreglo de plugin que nos ayuda a transformar nuestro código JavaScript a una versión más compatible con la mayoría de navegadores. Luego esta la sección de `plugins` que agrega mejoras en el rendimiento, o  comprimiendo ciertas partes del código para mayor eficiencia del proyecto.
 
@@ -82,7 +76,7 @@ La primera configuración que agregaremos será los `presets`, que contiene un a
 
 Y finalizando la configuración agregaremos al archivo `webpack.config.js` una reglas en la sección de módulos para que Webpack sepa que utilizar para transformar nuestro código JavaScript.
 
-```js
+```js{2-15}
 module.exports = {
  	module: {
         rules: [
@@ -103,10 +97,12 @@ module.exports = {
 
 ## Probando
 
-Como primer paso para ver si funciona nuestra nueva configuración de Webpack ya integrando Babel a nuestro proyecto, utilizaremos **Arrow function** que es una característica de ES6. 
+Como primer paso para ver si funciona nuestra nueva configuración de Webpack ya integrando Babel a nuestro proyecto, utilizaremos **Arrow function** que es una característica de ES6.
 
-```js
-// ./src/index.js
+Tomando el archivo `src/index.js` crearemos dos funciones, una llamada `sum` y otra llamada `calc` en ambas pasaremos parametros. En la funci+on `calc` pasaremos un [callback](#Callback) ademas de los dos números que necesitamos. En la función `sum` es igual.
+
+```js{5-8}
+console.log('Hello World');
 const sum = (num1, num2) => {
 	return num1 + num2;
 };
@@ -124,9 +120,13 @@ console.log(6);
 
 ## Definiciones
 
-### Punto al inicio
+### Punto al inicio <a name="punto-al-inicio"></a>
 
 El *punto* al inicio del nombre del archivo es para que el sistema lo oculte por defecto, pero aunque no sea visible el proyecto siempre va a poder acceder a él. Dentro del archivo se debe de configurar en formato.
+
+### Callback <a name="Callback"></a>
+
+En Javascript un callback es cuando se asigna una función como parametro de otra función. Más información [Callback: ¿qué son las funciones callback?](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/que-es-un-callback/)
 
 ## Bibliografía
 

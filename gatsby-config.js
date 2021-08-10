@@ -31,6 +31,8 @@ module.exports = {
 			},
 		},
 		{
+			//https://marcelhauri.ch/blog/how-to-colorize-a-tree-output-in-gatsbys-prism-plugin/
+			//https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css
 			resolve: 'gatsby-transformer-remark',
 			options: {
 				excerpt_separator: '<!-- endexcerpt -->',
@@ -42,7 +44,56 @@ module.exports = {
 						},
 					},
 					{
-						resolve: 'gatsby-remark-prismjs',
+						resolve: `gatsby-remark-prismjs`,
+						options: {
+							languageExtensions: [
+								{
+									language: 'treeview',
+									extend: 'json',
+									definition: {
+										'entry-line': [
+											{
+												pattern: /\|-- |├── /,
+												alias: 'line-h',
+											},
+											{
+												pattern: /\|   |│   /,
+												alias: 'line-v',
+											},
+											{
+												pattern: /`-- |└── /,
+												alias: 'line-v-last',
+											},
+											{
+												pattern: / {4}/,
+												alias: 'line-v-gap',
+											},
+										],
+										'entry-dir': {
+											pattern: /.*[\/](?!\w).*/,
+											inside: {
+												// symlink
+												operator: / -> /,
+											},
+										},
+										'entry-symlink': {
+											pattern: /.*\S.* (-> .*)/,
+											inside: {
+												operator: / -> /,
+												file: /(.*)/,
+											},
+										},
+										'entry-name': {
+											pattern: /.*\S.*/,
+											inside: {
+												// symlink
+												operator: / -> /,
+											},
+										},
+									},
+								},
+							],
+						},
 					},
 				],
 			},

@@ -1,9 +1,11 @@
 const path = require('path');
 
 module.exports = {
+	pathPrefix: '/rearalf.dev',
 	siteMetadata: {
 		title: 'rearAlf',
-		description: 'El website personal de Ricardo Alf',
+		description:
+			'Mi nombre es Ricardo Alfaro, pero puedes llamarme Alf, y en mi aquí puedes encontrar tutórales relacionados con JavaScript, y mi portafolio.',
 		author: 'Ricardo Alfaro',
 		firstName: `Ricardo`,
 		lastName: `Alfaro`,

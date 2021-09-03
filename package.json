@@ -9,8 +9,12 @@
 		"url": "https://rearalf.vercel.app/"
 	},
 	"homepage": "https://github.com/rearalf/rearalf.dev#readme",
-	"keywords": [ "gatsbyjs", "react" ],
+	"keywords": [
+		"gatsbyjs",
+		"react"
+	],
 	"license": "GNU GENERAL PUBLIC LICENSE",
+	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/rearalf/rearalf.dev.git"
@@ -20,25 +24,29 @@
 		"develop": "gatsby develop",
 		"start": "npm run develop",
 		"serve": "gatsby serve",
-		"clean": "gatsby clean"
+		"clean": "gatsby clean",
+		"deploy": "gatsby build --prefix-paths && gh-pages -d public"
 	},
 	"dependencies": {
-		"gatsby": "^3.3.1",
-		"gatsby-plugin-react-helmet": "^4.3.0",
-		"gatsby-plugin-sass": "^4.3.0",
-		"gatsby-plugin-sharp": "^3.3.1",
-		"gatsby-remark-images": "^5.0.0",
-		"gatsby-remark-prismjs": "^5.0.0",
-		"gatsby-source-filesystem": "^3.3.0",
-		"gatsby-transformer-remark": "^4.0.0",
-		"gatsby-transformer-sharp": "^3.3.0",
-		"prismjs": "^1.23.0",
+		"gatsby": "^3.13.0",
+		"gatsby-plugin-react-helmet": "^4.13.0",
+		"gatsby-plugin-sass": "^4.13.0",
+		"gatsby-plugin-sharp": "^3.13.0",
+		"gatsby-remark-images": "^5.10.0",
+		"gatsby-remark-prismjs": "^5.10.0",
+		"gatsby-source-filesystem": "^3.13.0",
+		"gatsby-transformer-remark": "^4.10.0",
+		"gatsby-transformer-sharp": "^3.13.0",
+		"prismjs": "^1.24.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-helmet": "^6.1.0",
-		"sass": "^1.32.11"
+		"sass": "^1.39.0"
 	},
 	"bugs": {
 		"url": "https://github.com/rearalf/rearalf.dev/issues"
+	},
+	"devDependencies": {
+		"gh-pages": "^3.2.3"
 	}
 }

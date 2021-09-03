@@ -8,7 +8,10 @@ export default function Home({ data }){
 	const { edges } = data.allMarkdownRemark;
 	return (
 		<Layout>
-			<Seo title="Home" description="Mí sitio Web" />
+			<Seo
+				title="rearalf.dev"
+				description="Mi nombre es Ricardo Alfaro, pero puedes llamarme Alf, y en mi aquí puedes encontrar tutórales relacionados con JavaScript, y mi portafolio."
+			/>
 			<section className="listPost">
 				{edges.map((edge, index) => {
 					const { frontmatter, fields } = edge.node;

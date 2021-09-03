@@ -1,0 +1,2 @@
+(self.webpackChunkrearalf_dev=self.webpackChunkrearalf_dev||[]).push([[682],{5518:function(e,r,a){"use strict";a.r(r),a.d(r,{default:function(){return o}});var n=a(7294),t=a(6005),l=a(8774);function o(){return n.createElement(t.A,null,n.createElement(l.p,{title:"Sobre mí",description:"Ricardo Alfaro desarrollador web"}),n.createElement("h1",null,"No hay información por ahora"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-24b38a7fe4b032fca6b5.js.map

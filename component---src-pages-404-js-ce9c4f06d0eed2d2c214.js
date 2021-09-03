@@ -1,0 +1,2 @@
+(self.webpackChunkrearalf_dev=self.webpackChunkrearalf_dev||[]).push([[883],{9616:function(e,r,n){"use strict";n.r(r),n.d(r,{default:function(){return t}});var u=n(7294);function t(){return u.createElement("h1",null,"Error 404")}}}]);
+//# sourceMappingURL=component---src-pages-404-js-ce9c4f06d0eed2d2c214.js.map

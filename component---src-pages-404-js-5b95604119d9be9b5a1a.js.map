@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-404-js-5b95604119d9be9b5a1a.js","mappings":"0KAEe,SAASA,IACvB,OAAO","sources":["webpack://rearalf.dev/./src/pages/404.js"],"sourcesContent":["import React from 'react';\r\n\r\nexport default function Home404(){\r\n\treturn <h1>Error 404</h1>;\r\n}\r\n"],"names":["Home404"],"sourceRoot":""}

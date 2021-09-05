@@ -9,6 +9,10 @@ export function Seo({ title = '', description = '' } = {}){
 			<meta name="description" content={description} />
 			<link rel="icon" href={favicon} />
 			<html lang="es" />
+			<meta
+				name="google-site-verification"
+				content="DRJHKE1m-qQ_urqzVZCOdNOxZddlPAKdJEKM6eF1NGQ"
+			/>
 		</Helmet>
 	);
 }

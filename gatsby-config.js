@@ -33,8 +33,6 @@ module.exports = {
 			},
 		},
 		{
-			//https://marcelhauri.ch/blog/how-to-colorize-a-tree-output-in-gatsbys-prism-plugin/
-			//https://github.com/PrismJS/prism/blob/master/plugins/treeview/prism-treeview.css
 			resolve: 'gatsby-transformer-remark',
 			options: {
 				excerpt_separator: '<!-- endexcerpt -->',

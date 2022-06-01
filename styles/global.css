@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background-color-1: #09161f;
+	--background-color-2: #051119;
+	--color-text-100: #f1fcfe;
+	--color-text-200: #e4f8fe;
+	--color-text-300: #d7f2fd;
+	--color-text-400: #ccebfb;
+	--color-text-500: #f5f5f5;
+	--color-text-600: #98bfd0;
+	--color-text-700: #6994ae;
+	--color-text-800: #426b8c;
+	--color-text-900: #284c74;
+
+	--color-primary-100: #f1fcfe;
+	--color-primary-200: #e4f8fe;
+	--color-primary-300: #d7f2fd;
+	--color-primary-400: #ccebfb;
+	--color-primary-500: #bbe1fa;
+	--color-primary-600: #98bfd0;
+	--color-primary-700: #6994ae;
+	--color-primary-800: #426b8c;
+	--color-primary-900: #284c74;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: var(--background-color-1);
+	color: var(--color-text-500);
+	font-family: 'Prompt', sans-serif;
+	overflow-x: hidden;
+}
+
+main.container {
+	min-height: 70vh;
+}
+
+.content-MDX {
+	background-color: var(--background-color-2);
+}
+
+.btn {
+	background-color: var(--color-primary-700);
+	color: var(--color-primary-100);
+}
+.btn:hover {
+	background-color: var(--color-primary-800);
+}
+.btn:active {
+	background-color: var(--color-primary-900);
+}
+
+.nav-item {
+	transition: all 0.3s ease-in-out;
+}
+.nav-item:hover {
+	color: var(--color-primary-600);
+}
+
+.image-cover {
+	background-image: url('../public/image-cover.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 180px;
+	height: 300px;
+	position: absolute;
+	right: -5px;
+	top: 450px;
+}
+
+@media screen and (min-width: 768px) {
+	.image-cover {
+		top: 250px;
+		right: -55px;
+		width: 220px;
+		height: 350px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.image-cover {
+		width: 360px;
+		height: 600px;
+		top: 100px;
+		right: -100px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.image-cover {
+		width: 400px;
+		height: 610px;
+		top: 85px;
+		right: -120px;
+	}
+}
+
+.header-home {
+	min-height: 60vh;
+}
+
+.header-description {
+	width: 62ch;
+}
+
+.header-link {
+	background-color: var(--color-primary-500);
+}
+.header-link:hover {
+	background-color: var(--color-primary-200);
+}
+
+.header-link.github-icon {
+	color: #333333;
+}
+.header-link.twitter-icon {
+	color: #1da1f2;
+}
+.header-link.linkedin-icon {
+	color: #0077b5;
+}
+
+.last-post {
+	background-color: var(--background-color-2);
+}
+
+.article-link-home {
+	background-color: var(--color-primary-500);
+	color: var(--color-text-900);
+}
+
+.border {
+	border: 2px solid var(--color-primary-100);
+}
+/* table p {
+	margin: 0;
+} */

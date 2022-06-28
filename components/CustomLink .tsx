@@ -8,9 +8,11 @@ const CustomLink = (props: { href: string; children: JSX.Element }) => {
 	if (isInternalLink) {
 		return (
 			<Link {...props}>
-				<a className="text-center inline-flex items-center gap-2 hover:underline">
+				<a className="text-center inline-flex items-center hover:underline">
 					{props.children}
-					{typeof props.children !== 'object' && <FiExternalLink size={10} />}
+					{typeof props.children !== 'object' && (
+						<FiExternalLink size={10} className="ml-2" />
+					)}
 				</a>
 			</Link>
 		)
@@ -20,8 +22,8 @@ const CustomLink = (props: { href: string; children: JSX.Element }) => {
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-center inline-flex items-center gap-2 hover:underline ">
-					{props.children} <FiExternalLink size={10} />
+					className="text-center inline-flex items-center hover:underline ">
+					{props.children} <FiExternalLink size={10} className="ml-2" />
 				</a>
 			</Link>
 		)

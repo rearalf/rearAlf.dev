@@ -12,19 +12,19 @@ const Footer = () => {
 					</h1>
 				</a>
 			</Link>
-			<div className="flex gap-4">
+			<div className="flex">
 				<a
 					href="https://github.com/rearalf"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="p-3 rounded flex hover:opacity-60">
+					className="p-3 rounded flex mr-4 hover:opacity-60">
 					<BsGithub size={24} />
 				</a>
 				<a
 					href="https://twitter.com/rear_alf"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="p-3 rounded flex hover:opacity-60">
+					className="p-3 rounded flex mr-4 hover:opacity-60">
 					<BsTwitter size={24} />
 				</a>
 				<a

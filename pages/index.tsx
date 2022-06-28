@@ -18,19 +18,19 @@ const Home = ({ content }: { content: FilesTitle[] }) => (
 					Soy un Frontend Developer que apaciona desarrollar aplicaciones con tecnología
 					web y aprender nuevos Framework y Librerías.
 				</p>
-				<div className="flex gap-4">
+				<div className="flex">
 					<a
 						href="https://github.com/rearalf"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="header-link github-icon p-3 rounded flex">
+						className="header-link github-icon p-3 mr-4 rounded flex">
 						<BsGithub size={24} />
 					</a>
 					<a
 						href="https://twitter.com/rear_alf"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="header-link twitter-icon p-3 rounded flex">
+						className="header-link twitter-icon p-3 mr-4 rounded flex">
 						<BsTwitter size={24} />
 					</a>
 					<a
